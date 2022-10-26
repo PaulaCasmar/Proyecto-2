@@ -30,42 +30,18 @@
 }
 
 .h1C {
-    margin-top: 85px;
+    margin-top: 63px;
 }
 
 /* CLASIFICACIÓN */
 
-/* table tr th .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
 
-table tr th .tooltip span.tooltiptext {
-    display: none !important;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-
-   
-    /* position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 105%;
-}
-
-table tr th .tooltip:hover .tooltiptext {
-    visibility: visible;
-} */ 
 
 /* MATCHES */
 
-.filtroP{
+.filtroP {
     margin: auto;
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -76,12 +52,12 @@ table tr th .tooltip:hover .tooltiptext {
     margin-left: 20px;
 }
 
-.h1L{
+.h1L {
     margin: auto;
     margin-top: 90px;
 }
 
-.filtrar{
+.filtrar {
     display: flex;
     margin: auto;
     padding: auto;
@@ -89,25 +65,25 @@ table tr th .tooltip:hover .tooltiptext {
     margin-top: 33px;
 }
 
-.nombre{
+.nombre {
     width: 260px;
     padding: auto;
     margin-right: 10px;
 }
 
-.btH{
+.btH {
     width: 73px;
     height: 37px;
-    
+
 }
 
-.botonh{
+.botonh {
     margin-left: 10px;
     padding: auto;
     margin-right: 15px;
 }
 
-.alert{
+.alert {
     width: 45%;
     margin: auto;
     margin-top: 15px;
@@ -197,18 +173,90 @@ img.imgLocal2 {
     margin-bottom: 10px;
 }
 
-.infoCL{
+.infoCL {
     margin: auto;
     text-align: center;
 }
 
-.btnI{
+.btnI {
     background-color: #212529;
     border-radius: 0 !important;
     margin-left: -10px !important;
     margin-top: 30px;
 }
 
-.h1I{
+.h1I {
     margin-top: 10px;
+}
+
+/* SPINNER */
+
+html,
+body {
+    height: 100%;
+}
+
+.box {
+    margin: 0 auto;
+    width: 40px;
+    height: 140px;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: grey;
+    bottom: 0;
+    border-radius: 100%;
+    transform: scaleX(.8);
+    opacity: .6;
+    animation: shadowScale 1s linear infinite;
+}
+
+
+.gravity {
+    width: 40px;
+    height: 40px;
+    animation: bounce 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://cdn2.iconfinder.com/data/icons/activity-5/50/26BD-soccer-ball-128.png');
+    background-size: cover;
+    animation: roll .7s linear infinite;
+}
+
+@keyframes roll {
+    0% {}
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes bounce {
+    0% {}
+
+    50% {
+        transform: translateY(100px)
+    }
+
+    100% {}
+}
+
+@keyframes shadowScale {
+    0% {}
+
+    50% {
+        transform: scaleX(1);
+        opacity: .8;
+    }
+
+    100% {}
 }

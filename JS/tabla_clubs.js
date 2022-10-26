@@ -22,6 +22,30 @@ function imagenesC(img) {
 
 imagenesC(club);
 
+
+function get_DataI() {
+  document.getElementById("spinner").style.display = "block";
+
+  const url = "https://api.football-data.org/v2/competitions/2014/teams";
+  fetch(url, {
+      method: "GET",
+      headers: {
+        "X-Auth-Token": "67aea19734a14543b5b76a95d900260d",
+      },
+    })
+    .then((response) => {
+      if (response.ok) return response.json();
+
+    })
+    .then((data) =>{
+      document.getElementById("spinner").style.display = "none";
+      let clubs_I = data.teams;
+      console.log(clubs_I);
+      crearTablaClub(clubs_I);
+    })
+}
+get_DataI()
+
 function crearTablaClub(info) {
   let cuerpo_tablaI = document.getElementById("cuerpo_tablaI");
 
@@ -34,7 +58,7 @@ function crearTablaClub(info) {
 
     let logoEquipo = document.createElement("img");
     logoEquipo.classList.add("imgLocal2");
-    logoEquipo.setAttribute("src", info[i].crest);
+    logoEquipo.setAttribute("src", info[i].crestUrl);
 
     let origin = document.createElement("p");
     origin.innerHTML = info[i].founded;
@@ -53,7 +77,7 @@ function crearTablaClub(info) {
       colours,
       venue,
     ];
-console.log(datos_tablaC.length);
+    // console.log(datos_tablaC.length);
     for (let j = 0; j < datos_tablaC.length; j++) {
       let td1 = document.createElement("td");
       td1.append(datos_tablaC[j]);
@@ -65,6 +89,4 @@ console.log(datos_tablaC.length);
 
 }
 
-crearTablaClub(club);
-
-
+// crearTablaClub(club);

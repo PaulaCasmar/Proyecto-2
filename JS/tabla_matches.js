@@ -1,11 +1,55 @@
-let datosP = partidos.matches;
-console.log(datosP);
+// let datosP = partidos.matches;
+// console.log(datosP);
 quitarAlert1();
 quitarAlert2();
 quitarAlert3();
 quitarAlert4();
 quitarAlert5();
 quitarAlert6();
+
+function getData() {
+    document.getElementById("spinner").style.display = "block";
+
+    const url = "https://api.football-data.org/v2/competitions/2014/matches";
+    fetch(url, {
+            method: "GET",
+            headers: {
+                "X-Auth-Token": "67aea19734a14543b5b76a95d900260d",
+            },
+        })
+        .then((response) => {
+            if (response.ok) return response.json();
+            // - hasta aquí tenemos lo que conseguimos con el POSTMAN
+        })
+        .then((data) => {
+            document.getElementById("spinner").style.display = "none";
+            let matches = data.matches;
+            console.log(matches);
+            crearTabla(matches);
+
+            let borrar = document.getElementById("reset");
+            borrar.addEventListener("click", () => {
+                resetFilter(matches);
+                quitarAlert1();
+                quitarAlert2();
+                quitarAlert3();
+                quitarAlert4();
+                quitarAlert5();
+                quitarAlert6();
+            });
+
+            let buscar = document.getElementById("buscar_b");
+            buscar.addEventListener("click", () => {
+                filtrarEquipos(matches);
+            });
+
+        })
+        .catch((error) => {
+            console.log(error)
+            alert("Ha ocurrido un problema al cargar la página");
+        });
+}
+getData();
 
 function crearTabla(resultados) {
     let cuerpo_tabla = document.getElementById("cuerpo_tabla");
@@ -64,7 +108,7 @@ function crearTabla(resultados) {
         cuerpo_tabla.append(tr);
     }
 }
-crearTabla(datosP);
+
 
 function filtrarEquipos(matches) {
     let input_text = document.querySelector("input[type=text]").value;
@@ -194,24 +238,9 @@ function resetFilter(partidos) {
     for (let i = 0; i < radioButton.length; i++) {
         radioButton[i].checked = false;
     }
-    crearTabla(datosP);
+    crearTabla(partidos);
 }
 
-let borrar = document.getElementById("reset");
-borrar.addEventListener("click", () => {
-    resetFilter(partidos);
-    quitarAlert1();
-    quitarAlert2();
-    quitarAlert3();
-    quitarAlert4();
-    quitarAlert5();
-    quitarAlert6();
-});
-
-let buscar = document.getElementById("buscar_b");
-buscar.addEventListener("click", () => {
-    filtrarEquipos(datosP);
-});
 
 function quitarAlert1() {
     let alerta1 = document.getElementById("alerta1");

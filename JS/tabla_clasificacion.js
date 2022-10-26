@@ -1,5 +1,34 @@
-let clasificacionT = clasificacion.standings[0].table
-console.log(clasificacionT)
+// let clasificacionT = clasificacion.standings[0].table
+// console.log(clasificacionT)
+
+
+function get_Data() {
+    document.getElementById("spinner").style.display = "block";
+
+    const url = "https://api.football-data.org/v2/competitions/2014/standings";
+    fetch(url, {
+            method: "GET",
+            headers: {
+                "X-Auth-Token": "67aea19734a14543b5b76a95d900260d",
+            },
+        })
+        .then((response) => {
+            if (response.ok) return response.json();
+        })
+        .then((data) => {
+            document.getElementById("spinner").style.display = "none";
+            let clasificacionT = data.standings[0].table;
+            crearTablaC(clasificacionT);
+            console.log(clasificacionT)
+        })
+        .catch((error) => {
+            console.log(error)
+            alert("Ha ocurrido un problema al cargar la página");
+        });
+
+
+}
+get_Data();
 
 function crearTablaC(clas) {
     let cuerpo_tablaC = document.getElementById("cuerpo_tablaClas")
@@ -41,10 +70,6 @@ function crearTablaC(clas) {
         imagen.setAttribute("src", clas[i].team.crestUrl);
         imagen.classList.add("escudos");
 
-    
-        
-
-
         let datos_tabla = [
             position,
             imagen,
@@ -71,7 +96,7 @@ function crearTablaC(clas) {
     }
 }
 
-crearTablaC(clasificacionT);
+
 
 
 

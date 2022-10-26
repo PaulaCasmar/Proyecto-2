@@ -1,5 +1,5 @@
-let proximosP = proximosp.matches
-console.log(proximosP)
+// let proximosP = proximosp.matches
+// console.log(proximosP)
 
 // let equipol = proximosP[2].awayTeam.name;
 // console.log(equipol)
@@ -10,6 +10,35 @@ console.log(proximosP)
 // let date = proximosP[2].utcDate;
 // console.log(date)
 
+function get_DataP() {
+    document.getElementById("spinner").style.display = "block";
+
+    const url = "https://api.football-data.org/v2/matches";
+    fetch(url, {
+            method: "GET",
+            headers: {
+                "X-Auth-Token": "67aea19734a14543b5b76a95d900260d",
+            },
+
+        })
+        .then((response) => {
+            if (response.ok) return response.json();
+        })
+        .then((data) => {
+            document.getElementById("spinner").style.display = "none";
+            let proximosP = data.matches;
+            console.log(proximosP);
+            crearTablaP(proximosP);
+        })
+        .catch((error) => {
+            console.log(error)
+            alert("Ha ocurrido un problema al cargar la página");
+        });
+}
+get_DataP();
+
+
+
 function crearTablaP(proxp) {
     let cuerpo_tablap = document.getElementById("cuerpo_tablap")
 
@@ -17,34 +46,38 @@ function crearTablaP(proxp) {
         let tr = document.createElement("tr");
 
         let pais = document.createElement("p");
-        pais.innerHTML = proxp[i].area.name;
+        pais.innerHTML = proxp[i].competition.area.name;
+        console.log(pais)
 
         let equipo_local = document.createElement("p");
         equipo_local.innerHTML = proxp[i].homeTeam.name;
-        
+
 
         let equipo_visitante = document.createElement("p");
         equipo_visitante.innerHTML = proxp[i].awayTeam.name;
 
-        let imgEL = document.createElement("img");
-        imgEL.setAttribute("src", proxp[i].homeTeam.crest);
-        imgEL.classList.add("escudos");
+        let liga = document.createElement("p");
+        liga.innerHTML = proxp[i].competition.name;
 
-        let imgEV = document.createElement("img");
-        imgEV.setAttribute("src", proxp[i].awayTeam.crest);
-        imgEV.classList.add("escudos");
+        // let imgEL = document.createElement("img");
+        // imgEL.setAttribute("src", proxp[i].homeTeam.crest);
+        // imgEL.classList.add("escudos");
+
+        // let imgEV = document.createElement("img");
+        // imgEV.setAttribute("src", proxp[i].awayTeam.crest);
+        // imgEV
 
         let bandera = document.createElement("img");
-        bandera.setAttribute("src", proxp[i].area.flag);
+        bandera.setAttribute("src", proxp[i].competition.area.ensignUrl);
+        bandera.classList.add("escudos");
 
         let fecha = new Date(proxp[i].utcDate);
 
         let datos_tabla = [
-           bandera,
+            bandera,
             pais,
-            imgEL,
+            liga,
             equipo_local,
-            imgEV,
             equipo_visitante,
             fecha.toLocaleString(),
         ];
@@ -52,11 +85,11 @@ function crearTablaP(proxp) {
         for (let j = 0; j < datos_tabla.length; j++) {
             let td = document.createElement("td");
             td.append(datos_tabla[j]);
-            tr.append(td);            
+            tr.append(td);
         }
         cuerpo_tablap.append(tr);
     }
-    
+
 }
 
-crearTablaP(proximosP);
+// crearTablaP(proximosP);
