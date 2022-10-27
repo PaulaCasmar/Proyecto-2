@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="imagenes/laligac.png" />
     <title>Clasificación</title>
 </head>
 
@@ -37,10 +38,10 @@
                     </li>
                     <div class="clubsL" id="clubsL"></div>
                 </ul>
-                <form class="d-flex" role="search">
+                <!-- <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
+                </form> -->
             </div>
         </div>
     </nav>
@@ -48,18 +49,13 @@
 
     <div class="row justify-content-center">
         <h1 class="h1C text-center">Clasificación LaLiga</h1>
-        <div id="spinner" class="box">
-            <div class="shadow"></div>
-            <div class="gravity">
-              <div class="ball"></div>
-            </div>
-          </div>
+
         <div class="infoCL">
             <a href="clasificacion.html" class="btnI btn btn-primary">Clasificación</a>
             <a href="infoC.html" class="btnI btn btn-primary">Información Clubs</a>
         </div>
         <div class="col-auto">
-            <table class="table table-dark table-hover
+            <table class="table tableC table-dark table-hover
     table-bordered table-group-divider ">
                 <thead>
                     <tr>
@@ -81,10 +77,21 @@
                 </thead>
 
                 <tbody id="cuerpo_tablaClas" class="text-center">
-                   
                 </tbody>
 
             </table>
+            <div class="colors" id="colors">
+                <div class="color1">Champions League</div>
+                <div class="color2">Europa League</div>
+                <div class="color3">UEFA Conference League</div>
+                <div class="color4">Descenso</div>
+            </div>
+            <div id="spinner" class="box">
+                <div class="shadow"></div>
+                <div class="gravity">
+                    <div class="ball"></div>
+                </div>
+            </div>
         </div>
     </div>
 

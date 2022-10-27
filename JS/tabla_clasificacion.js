@@ -4,6 +4,7 @@
 
 function get_Data() {
     document.getElementById("spinner").style.display = "block";
+    document.getElementById("colors").style.display = "none";
 
     const url = "https://api.football-data.org/v2/competitions/2014/standings";
     fetch(url, {
@@ -17,6 +18,7 @@ function get_Data() {
         })
         .then((data) => {
             document.getElementById("spinner").style.display = "none";
+            document.getElementById("colors").style.display = "block";
             let clasificacionT = data.standings[0].table;
             crearTablaC(clasificacionT);
             console.log(clasificacionT)
@@ -98,53 +100,3 @@ function crearTablaC(clas) {
 
 
 
-
-
-// for (let i = 0; i < clasificacionT.length; i++) {
-
-//     let teamName = clasificacionT[i].team.name;
-//     console.log(teamName);
-
-//     let position = clasificacionT[i].position;
-//     console.log(position);
-
-//     let playedGames = clasificacionT[i].playedGames;
-//     console.log(playedGames);
-
-//     let won = clasificacionT[i].won;
-//     console.log(won);
-
-//     let draw = clasificacionT[i].draw;
-//     console.log(draw);
-
-//     let lost = clasificacionT[i].lost;
-//     console.log(lost);
-
-//     let points = clasificacionT[i].points;
-//     console.log(points);
-
-//     let goalsFor = clasificacionT[i].goalsFor;
-//     console.log(goalsFor);
-
-//     let goalsAgainst = clasificacionT[i].goalsAgainst;
-//     console.log(goalsAgainst);
-
-//     let goalDifference = clasificacionT[i].goalDifference;
-//     console.log(goalDifference)
-// }
-
-
-
-
-
-// let points = clasificacion.standings[0].table[0].points;
-// console.log(points);
-
-// let goalsFor = clasificacion.standings[0].table[0].goalsFor;
-// console.log(goalsFor);
-
-// let goalsAgainst = clasificacion.standings[0].table[0].goalsAgainst;
-// console.log(goalsAgainst);
-
-// let goalDifference = clasificacion.standings[0].table[0].goalDifference;
-// console.log(goalDifference);

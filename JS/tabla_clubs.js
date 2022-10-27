@@ -1,5 +1,23 @@
-console.log(clubs.teams);
-let club = clubs.teams;
+
+function get_imgC() {
+  const url = "https://api.football-data.org/v2/competitions/2014/teams";
+  fetch(url, {
+      method: "GET",
+      headers: {
+        "X-Auth-Token": "67aea19734a14543b5b76a95d900260d",
+      },
+    })
+    .then((response) => {
+      if (response.ok) return response.json();
+
+    })
+    .then((data) =>{
+      let clubs_Img = data.teams;
+      console.log(clubs_Img)
+      imagenesC(clubs_Img);
+    })
+}
+get_imgC();
 
 function imagenesC(img) {
   let clubs_L = document.getElementById("clubsL");
@@ -9,10 +27,13 @@ function imagenesC(img) {
 
     let logoEquipo = document.createElement("img");
     logoEquipo.classList.add("imgLocal2");
-    logoEquipo.setAttribute("src", img[i].crest);
+    logoEquipo.setAttribute("src", img[i].crestUrl
+    );
+    
 
     let enlace = document.createElement("a");
     enlace.setAttribute("href", img[i].website);
+    enlace.setAttribute("target", "_blank")
 
     enlace.append(logoEquipo);
     div.append(enlace);
@@ -20,7 +41,7 @@ function imagenesC(img) {
   }
 }
 
-imagenesC(club);
+
 
 
 function get_DataI() {
