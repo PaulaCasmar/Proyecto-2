@@ -55,6 +55,8 @@ Los nombres utilizados para esta función en los distintos archivos son:</p>
 <p>- V1.0 (26/10/2022) Primera versión del proyecto</p>
 <p>- V1.1 (27/10/2022) 
 Mejoras en diseño y fetch() para la actualización de los datos a tiempo real. </p>
+<p> V1.2 (31/10/2022)
+ Mejoras en diseño, responsive y actualizaciones de la Home </p>
 
 <h2>To-Do</h2>
 <p>- Mejorar el diseño</p>
