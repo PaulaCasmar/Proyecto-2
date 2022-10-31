@@ -23,8 +23,7 @@ function imagenesC(img) {
   let clubs_L = document.getElementById("clubsL");
 
   for (let i = 0; i < img.length; i++) {
-    let div = document.createElement("div");
-
+  
     let logoEquipo = document.createElement("img");
     logoEquipo.classList.add("imgLocal2");
     logoEquipo.setAttribute("src", img[i].crestUrl
@@ -36,8 +35,8 @@ function imagenesC(img) {
     enlace.setAttribute("target", "_blank")
 
     enlace.append(logoEquipo);
-    div.append(enlace);
-    clubs_L.append(div);
+  clubs_L.append(enlace);
+    
   }
 }
 

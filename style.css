@@ -22,35 +22,90 @@
 }
 
 .cardT {
-
+display: flex;
     margin-top: 200px;
 
     margin: auto;
     padding: auto;
+    justify-content: space-between;
 }
 
-.h1C {
+.foto3 {
+    background-image: url("./imagenes/estadio.jpg");
+    background-repeat: no-repeat;
+    
+    background-size: cover; 
+    width: 90%;
+    height: 200px;
+    margin: auto;
+}
+
+.foto1 {
+    background-image: url("./imagenes/pelota.webp");
+    background-repeat: no-repeat;
+    
+    background-size: cover; 
+    width: 90%;
+    height: 200px;
+    margin: auto;
+}
+
+.foto2{
+    background-image: url("./imagenes/red.jpg");
+    background-repeat: no-repeat;
+    
+    background-size: cover; 
+    width: 90%;
+    height: 200px;
+    margin: auto;
+}
+
+.h1H {
+    margin-top: 90px;
+   color: white !important;
+}
+
+.h1C{
     margin-top: 90px;
 }
 
+.card {
+    box-shadow: darkgrey 5px 5px 3px;
+    size: 100px;
+    margin: auto;
+}
+/* .contenedorN{
+    justify-content: space-around;
+  
+} */
+
+.containers {
+    justify-content: space-between;
+}
+
+h5 {
+    color: white;
+}
+
+.background {
+    background-image: url("/imagenes/campo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.welcome {
+    text-decoration-color: white;
+}
 /* CLASIFICACIÓN */
-.tableC tr:nth-of-type(1)>td:first-of-type {
+.tableC tr:nth-of-type(1)>td:first-of-type, 
+.tableC tr:nth-of-type(2)>td:first-of-type,
+.tableC tr:nth-of-type(3)>td:first-of-type,
+.tableC tr:nth-of-type(4)>td:first-of-type {
     background-color:rgb(57, 57, 185);
   }
 
-  .tableC tr:nth-of-type(2)>td:first-of-type {
-    background-color:rgb(57, 57, 185);
-  }
-
-  .tableC tr:nth-of-type(3)>td:first-of-type {
-    background-color:rgb(57, 57, 185);
-  }
-
-  .tableC tr:nth-of-type(4)>td:first-of-type {
-    background-color:rgb(57, 57, 185);
-  }
-
-  .tableC tr:nth-of-type(5)>td:first-of-type {
+    .tableC tr:nth-of-type(5)>td:first-of-type {
     background-color:rgb(246, 246, 29);
   }
 
@@ -121,6 +176,21 @@
     padding-left: 3px;
     margin-left: 3px;
   }
+
+  .tableC{
+    width: 109%;
+    margin: auto;
+    padding: auto;
+  }
+.table{
+    margin: auto;
+    align-self: center;
+}
+
+.web{
+text-decoration: none;
+}
+
 
 /* MATCHES */
 
@@ -231,26 +301,16 @@ img.imgLocal2 {
     /* margin: auto; */
     padding-left: 5px;
     padding-right: 3px;
-    align-items: flex-end;
+    /* align-items: flex-end; */
  
 }
 
-.clubsL {
-    display: flex;
-    flex-direction: row;
-  
-    padding-left: 60px;
-    padding-right: 20px;
-    margin: auto;
-    align-self: right;
-    justify-content: right;
-    margin-left: 150px;
-}
+
 
 .footert {
     margin-top: 135px;
     height: 140px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 

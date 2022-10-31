@@ -13,16 +13,16 @@
     <title>LaLiga</title>
 </head>
 
-<body>
+<body class="background">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand"><img class="laligan" src="./imagenes/laligam.png" alt=""></a>
+            <a class="navbar-brand"><img class="laligan" src="./imagenes/laligam.png" alt="Logo LaLiga Blanco"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="containers collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="home.html">Home</a>
@@ -36,8 +36,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="proximospartidos.html">Próximos Partidos</a>
                     </li>
-                    <div class="clubsL" id="clubsL"></div>
                 </ul>
+                <div class="clubsL" id="clubsL"></div>
+
                 <!-- <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
@@ -46,8 +47,8 @@
         </div>
     </nav>
 
-<h1 class="h1C">Bienvenidos a LaLiga Webpage</h1>
-    <div id="carouselExampleDark" class=" logosf carousel carousel-dark slide" data-bs-ride="carousel">
+    <h1 class="h1H welcome">Bienvenidos a LaLiga Webpage</h1>
+    <div id="carouselExampleDark" class=" logosf carousel  slide" data-bs-ride="carousel">
         <div class=" carousel-indicators next">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -93,139 +94,186 @@
                 <img src="https://crests.football-data.org/81.svg" class="Foto d-block w-100 Foto"
                     alt="Logo FC Barcelona">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>FC Barcelona</h5>
+                    <a class="web" href="https://www.fcbarcelona.com/" target="_blank">
+                        <h5>FC Barcelona</h5>
+                    </a>
                 </div>
+
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://crests.football-data.org/86.svg" class=" Foto d-block w-100" alt="Logo Real Madrid CF">
+                <img src="https://crests.football-data.org/86.svg" class=" Foto d-block w-100"
+                    alt="Logo Real Madrid CF">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Real Madrid CF</h5>
+                    <a class="web" href="https://www.realmadrid.com/" target="_blank">
+                        <h5>Real Madrid CF</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/77.svg" class=" Foto d-block w-100" alt="Athletic Club">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Athletic Club</h5>
+                    <a class="web" href="https://www.athletic-club.eus/" target="_blank">
+                        <h5>Athletic Club</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://crests.football-data.org/78.svg" class=" Foto d-block w-100" alt="Logo Club Atlético de Madrid">
+                <img src="https://crests.football-data.org/78.svg" class=" Foto d-block w-100"
+                    alt="Logo Club Atlético de Madrid">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Club Atlético de Madrid</h5>
+                    <a class="web" href="https://www.atleticodemadrid.com/" target="_blank">
+                        <h5>Club Atlético de Madrid</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://crests.football-data.org/90.svg" class="Foto d-block w-100" alt="Logo Real Betis Balompié">
+                <img src="https://crests.football-data.org/90.svg" class="Foto d-block w-100"
+                    alt="Logo Real Betis Balompié">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Real Betis Balompié</h5>
+                    <a class="web" href="https://www.realbetisbalompie.es/" target="_blank">
+                        <h5>Real Betis Balompié</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://crests.football-data.org/92.svg" class="Foto d-block w-100" alt="Logo Real Sociedad de Fútbol">
+                <img src="https://crests.football-data.org/92.svg" class="Foto d-block w-100"
+                    alt="Logo Real Sociedad de Fútbol">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Real Sociedad de Fútbol</h5>
+                    <a class="web" href="https://www.realsociedad.eus/" target="_blank">
+                        <h5>Real Sociedad de Fútbol</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/95.svg" class="Foto d-block w-100" alt="Logo Valencia CF">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Valencia CF</h5>
+                    <a class="web" href="https://www.valenciacf.com/es" target="_blank">
+                        <h5>Valencia CF</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/79.svg" class="Foto d-block w-100" alt="Logo CA Osasuna">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>CA Osasuna</h5>
+                    <a class="web" href="https://www.osasuna.es/" target="_blank">
+                        <h5>CA Osasuna</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/94.svg" class="Foto d-block w-100" alt="Logo Villarreal CF">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Villarreal CF</h5>
+                    <a class="web" href="https://villarrealcf.es/" target="_blank">
+                        <h5>Villarreal CF</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/87.svg" class="Foto d-block w-100" alt="Logo Rayo Vallecano">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Rayo Vallecano</h5>
+                    <a class="web" href="http://www.rayovallecano.es/" target="_blank">
+                        <h5>Rayo Vallecano</h5>
+                    </a>
                 </div>
 
             </div>
-            
+
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://crests.football-data.org/558.svg" class="Foto d-block w-100" alt="Logo RC Celta de Vigo">
+                <img src="https://crests.football-data.org/558.svg" class="Foto d-block w-100"
+                    alt="Logo RC Celta de Vigo">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>RC Celta de Vigo</h5>
+                    <a class="web" href="https://rccelta.es/" target="_blank">
+                        <h5>RC Celta de Vigo</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/89.svg" class="Foto d-block w-100" alt="Logo RCD Mallorca">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>RCD Mallorca</h5>
+                    <a class="web" href="https://www.rcdmallorca.es/" target="_blank">
+                        <h5>RCD Mallorca</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://crests.football-data.org/250.svg" class="Foto d-block w-100" alt="Logo Real Valladolid CF">
+                <img src="https://crests.football-data.org/250.svg" class="Foto d-block w-100"
+                    alt="Logo Real Valladolid CF">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Real Valladolid CF</h5>
+                    <a class="web" href="https://www.realvalladolid.es/" target="_blank">
+                        <h5>Real Valladolid CF</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/298.svg" class="Foto d-block w-100" alt="Logo Girona FC">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Girona FC</h5>
+                    <a class="web" href="https://www.gironafc.cat/" target="_blank">
+                        <h5>Girona FC</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/267.svg" class="Foto d-block w-100" alt="Logo UD Almería">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>UD Almería</h5>
+                    <a class="web" href="https://www.udalmeriasad.com/" target="_blank">
+                        <h5>UD Almería</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/82.svg" class="Foto d-block w-100" alt="Logo Getafe CF">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Getafe CF</h5>
+                    <a class="web" href="https://www.getafecf.com/" target="_blank">
+                        <h5>Getafe CF</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item">
                 <img src="https://crests.football-data.org/80.svg" class="Foto d-block w-100" alt="Logo RCD Espanyol ">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>RCD Espanyol </h5>
+                    <a class="web" href="https://www.rcdespanyol.com/" target="_blank">
+                        <h5>RCD Espanyol </h5>
+                    </a>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/559.svg" class="Foto d-block w-100" alt="Logo Sevilla FC">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Sevilla FC</h5>
+                    <a class="web" href="https://www.sevillafc.es/" target="_blank">
+                        <h5>Sevilla FC</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/264.svg" class="Foto d-block w-100" alt="Logo Cádiz CF">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Cádiz CF</h5>
+                    <a class="web" href="https://www.cadizcf.com/" target="_blank">
+                        <h5>Cádiz CF</h5>
+                    </a>
                 </div>
 
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://crests.football-data.org/285.svg" class="Foto d-block w-100" alt="Logo Elche CF">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Elche CF</h5>
+                    <a class="web" href="https://www.elchecf.es/" target="_blank">
+                        <h5>Elche CF</h5>
+                    </a>
                 </div>
 
             </div>
@@ -240,25 +288,31 @@
         </button>
     </div>
 
-    <div class="cardT d-flex flex-row  justify-content-evenly">
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/laligabw.jpeg" class="card-img-top fotosh" alt="Logo LaLiga">
+    <div class="cardT">
+        <div class="card">
+            <div class="foto1">
+               
+            </div>
             <div class="card-body">
                 <h5 class="card-title">Resultados</h5>
                 <p class="card-text">Resultados de los últimos partidos de LaLiga Santander.</p>
                 <a href="matches.html" class="btn btn-primary">Resultados</a>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/futbol.jpeg" class="card-img-top fotosh" alt="Imagen futbol">
+        <div class="card">
+            <div class="foto2">
+                
+            </div>
             <div class="card-body">
                 <h5 class="card-title">Clasificación</h5>
                 <p class="card-text">Clasificación de los equipos de LaLiga Santander de la Temporada 2022-2023.</p>
                 <a href="clasificacion.html" class="btn btn-primary">Clasificación</a>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/proximos.jpeg" class="card-img-top fotosh" alt="Imagen campo de futbol">
+        <div class="card">
+            <div class="foto3">
+               
+            </div>
             <div class="card-body">
                 <h5 class="card-title">Próximos partidos</h5>
                 <p class="card-text">Información y horarios de los próximos partidos de fútbol.</p>
@@ -270,31 +324,31 @@
 
 
     <footer class="bg-dark text-center text-white">
-        
+
         <div class="footert container p-4 pb-0">
 
             <div>
-            <a class="btn btn-outline-light btn-floating m-1" href="https://es-es.facebook.com/LaLiga/" role="button"><i
-                    class="fab fa-facebook-f"></i>
-            </a>
-
-            
-            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/LaLiga" role="button"><i
-                    class="fab fa-twitter"></i>
-            </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://es-es.facebook.com/LaLiga/"
+                    role="button"><i class="fab fa-facebook-f"></i>
+                </a>
 
 
-            
-            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/laliga/?hl=en"
-                role="button"><i class="fab fa-instagram"></i>
-            </a>
-        </div>
-        <div>
-
-           <p> © 2022 Copyright: Paula Castellana </p>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/LaLiga" role="button"><i
+                        class="fab fa-twitter"></i>
+                </a>
 
 
-        </div>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/laliga/?hl=en"
+                    role="button"><i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div>
+
+                <p> © 2022 Copyright: Paula Castellana </p>
+
+
+            </div>
 
         </div>
 
@@ -302,7 +356,7 @@
 
 
 
-   
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
